@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhanatkhanov - Landing</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        milk: '#F7F7F4',
+                        graphite: '#181818',
+                        accentGreen: '#00FF00',
+                        borderGray: '#E2E2DC',
+                        textMuted: '#666666'
+                    },
+                    fontFamily: {
+                        sans: ['"TT Firs Neue"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'TT Firs Neue';
+            src: url('TT-Firs-Neue.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        body {
+            background-color: #F7F7F4;
+            color: #181818;
+            -webkit-font-smoothing: antialiased;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-milk text-graphite selection:bg-accentBlue selection:text-white">
+    <header class="fixed top-0 left-0 w-full z-50 bg-milk/80 backdrop-blur-md border-b border-borderGray">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-lg font-semibold tracking-tight">zhanatkhanov</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm text-textMuted font-medium">
+                <a href="#about" class="hover:text-graphite transition-colors">Обо мне</a>
+                <a href="#skills" class="hover:text-graphite transition-colors">Навыки</a>
+                <a href="#projects" class="hover:text-graphite transition-colors">Проекты</a>
+                <a href="#contact" class="hover:text-graphite transition-colors">Контакты</a>
+            </nav>
+            <a href="https://t.me/pykpz" target="_blank" rel="noopener noreferrer" class="text-sm font-medium px-5 py-2.5 rounded-full border border-graphite/20 hover:border-graphite transition-all">
+                Связаться
+            </a>
+        </div>
+    </header>
+    
+    <main class="max-w-6xl mx-auto px-6 pt-32 md:pt-40">
+        <section class="min-h-[75vh] flex flex-col justify-center py-12 reveal">
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-borderGray bg-white/50 w-fit mb-6">
+                <span class="w-2 h-2 rounded-full bg-accentGreen animate-pulse"></span>
+                <span class="text-sm font-medium tracking-wide text-textMuted">Открыт к стажировкам</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.08] mb-8">
+                Data Engineering <br>
+                <span class="text-textMuted font-normal">& Telegram Bots</span>
+            </h1>
+            <p class="text-lg md:text-xl text-textMuted max-w-2xl font-normal leading-relaxed mb-12">
+                Привет! Я Жанасыл - студент направления Data Engineering и разработчик. В основном специализируюсь на создании Telegram-ботов, автоматизации рутины и построении пайплайнов данных.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="#projects" class="px-8 py-4 rounded-full bg-graphite text-white font-medium hover:bg-accentBlue transition-colors">
+                    Смотреть проекты
+                </a>
+                <a href="https://github.com/zhanatkhanov" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full border border-borderGray bg-white font-medium hover:border-graphite transition-colors">
+                    GitHub профиль
+                </a>
+            </div>
+        </section>
+        
+        <div class="w-full h-px bg-borderGray my-12"></div>
+        
+        <section id="about" class="py-20 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                <div class="md:col-span-4">
+                    <h2 class="text-sm tracking-wide text-textMuted font-semibold mb-2">О себе</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Инженерный подход и автоматизация</h3>
+                </div>
+                <div class="md:col-span-8 space-y-6 text-lg text-textMuted leading-relaxed">
+                    <p class="text-graphite font-medium">
+                        Мой фокус - разработка функциональных Telegram ботов, обработка данных и серверная архитектура.
+                    </p>
+                    <p>
+                        Мне интересно создавать удобные интерфейсы внутри мессенджера, автоматизировать процессы и проектировать надежные бэкенд системы.
+                    </p>
+                    <p>
+                        Параллельно с учебой я углубляюсь в Linux, контейнеризацию и работу с различными языками.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="w-full h-px bg-borderGray my-12"></div>
+        
+        <section id="skills" class="py-20 reveal">
+            <div class="mb-12">
+                <h2 class="text-sm tracking-wide text-textMuted font-semibold mb-2">Навыки</h2>
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Стек технологий</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-2xl bg-white border border-borderGray flex flex-col justify-between hover:border-graphite/40 transition-all">
+                    <div>
+                        <div class="text-accentBlue font-mono text-sm mb-4">Telegram & Python</div>
+                        <h4 class="text-xl font-bold mb-3">Разработка ботов</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">Python (Aiogram, TeleBot, Telethon), асинхронное программирование, интеграция со сторонними API, создание многошаговых сценариев.</p>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl bg-white border border-borderGray flex flex-col justify-between hover:border-graphite/40 transition-all">
+                    <div>
+                        <div class="text-accentBlue font-mono text-sm mb-4">Data & Backend</div>
+                        <h4 class="text-xl font-bold mb-3">Инженерия данных</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">ETL пайплайны, базы данных (PostgreSQL, ClickHouse), Docker, FastAPI, проектирование Rest API и автоматизация.</p>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white border border-borderGray flex flex-col justify-between hover:border-graphite/40 transition-all">
+                    <div>
+                        <div class="text-accentBlue font-mono text-sm mb-4">Core & Ops</div>
+                        <h4 class="text-xl font-bold mb-3">Системный базис</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">Уверенное владение Linux (Ubuntu/Debian), Bash, базовое администрирование серверов и деплой приложений.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="w-full h-px bg-borderGray my-12"></div>
+        
+        <section id="projects" class="py-20 reveal">
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-sm tracking-wide text-textMuted font-semibold mb-2">Портфолио</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Проекты</h3>
+                </div>
+                <a href="https://github.com/zhanatkhanov" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-accentBlue hover:underline inline-flex items-center gap-1">
+                    Смотреть профиль GitHub &rarr;
+                </a>
+            </div>
+
+            <div class="py-16 md:py-24 rounded-2xl bg-white border border-dashed border-borderGray text-center flex flex-col items-center justify-center">
+                <div class="w-16 h-16 bg-milk rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-textMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Здесь пока пусто</h4>
+                <p class="text-textMuted max-w-sm mx-auto">Я навожу порядок, совсем скоро добавлю сюда свои проекты.</p>
+            </div>
+        </section>
+        
+        <div class="w-full h-px bg-borderGray my-12"></div>
+        
+        <section id="contact" class="py-20 mb-20 reveal">
+            <div class="p-10 md:p-16 rounded-3xl bg-graphite text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+                <div>
+                    <h2 class="text-sm tracking-wide text-white/60 font-semibold mb-2">Контакты</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Давайте обсудим сотрудничество</h3>
+                    <p class="text-white/70 max-w-md">Открыт к предложениям по созданию ботов, стажировкам в Data Engineering и Backend разработке.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                    <a href="https://t.me/pykpz" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-accentBlue text-white font-medium hover:bg-blue-600 transition-colors text-center">
+                        Telegram
+                    </a>
+                    <a href="https://github.com/zhanatkhanov" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 transition-colors text-center">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="border-t border-borderGray py-8 text-center text-sm text-textMuted">
+        <p>&copy; 2026 zhanatkhanov. Все права защищены.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
