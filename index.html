@@ -32,20 +32,27 @@
             font-style: normal;
             font-display: swap;
         }
+        
         body {
             background-color: #F7F7F4;
             color: #181818;
             -webkit-font-smoothing: antialiased;
+            font-style: normal !important;
+            font-synthesis: none;
         }
+        
         .reveal {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+    </style>
+</head>
     </style>
 </head>
 <body class="bg-milk text-graphite selection:bg-accentBlue selection:text-white">
